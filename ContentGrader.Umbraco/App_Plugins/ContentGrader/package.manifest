@@ -1,7 +1,7 @@
 ﻿{
   "propertyEditors": [
     {
-      "name": "Rich text editor",
+      "name": "Content Grader",
       "alias": "rte",
       "editor": {
         "view": "rte"
