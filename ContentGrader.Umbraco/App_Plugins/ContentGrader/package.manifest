@@ -1,0 +1,27 @@
+﻿{
+  "propertyEditors": [
+    {
+      "name": "Rich text editor",
+      "alias": "rte",
+      "editor": {
+        "view": "rte"
+      },
+      "prevalues": {
+        "fields": [
+          {
+            "label": "Live Updates",
+            "description": "Should the content score be updated as you type?",
+            "key": "liveUpdates",
+            "view": "boolean"
+          }
+        ]
+      }
+    }
+  ],
+  javascript: [
+    "~/App_Plugins/ContentGrader/ContentGrader.Controller.js"
+  ],
+	css: [
+		"~/App_Plugins/ContentGrader/Css/ContentGrader.css"
+	]
+}
