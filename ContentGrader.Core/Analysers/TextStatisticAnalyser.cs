@@ -72,6 +72,10 @@ namespace ContentGrader.Core.Analysers
 
         private static string CleanText(string text)
         {
+            //Guard against null text
+            if (text == null)
+                return string.Empty;
+
             foreach (var tag in FullStopTags)
             {
                 text = Regex.Replace(text, "</" + tag + ">", ".", RegexOptions.IgnoreCase);
@@ -96,13 +100,13 @@ namespace ContentGrader.Core.Analysers
         }
 
         /// <summary>
-        /// Calculate all the available meaurements and return a Statistics struct
+        /// Calculate all the available measurements and return a Statistics strut
         /// </summary>
         /// <param name="text"></param>
         /// <returns>Statistics</returns>
         public static TextStatistics Calculate(string text)
         {
-            var parsed = TextStatisticAnalyser.Parse(text);
+            var parsed = Parse(text);
 
             return new TextStatistics()
             {

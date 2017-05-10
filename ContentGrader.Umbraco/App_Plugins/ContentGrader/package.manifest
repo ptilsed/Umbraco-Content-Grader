@@ -3,8 +3,9 @@
     {
       "name": "Content Grader",
       "alias": "rte",
+      "isGridEditor": true, 
       "editor": {
-        "view": "rte"
+        "view": "~/App_Plugins/ContentGrader/ContentGraderRTE.html"
       },
       "prevalues": {
         "fields": [
@@ -19,7 +20,9 @@
     }
   ],
   javascript: [
-    "~/App_Plugins/ContentGrader/ContentGrader.Controller.js"
+    "~/App_Plugins/ContentGrader/Scripts/secondstominutes.filter.js",
+    "~/App_Plugins/ContentGrader/Scripts/ContentGrader.Controller.js",
+    "~/App_Plugins/ContentGrader/Scripts/ContentGrader.Resource.js"
   ],
 	css: [
 		"~/App_Plugins/ContentGrader/Css/ContentGrader.css"

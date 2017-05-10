@@ -8,6 +8,33 @@ namespace ContentGrader.Core.Models
         private AutomatedReadabilityLevel _automatedReadabilityLevel;
 
         public double FleschKincaidReadingEase { get; set; }
+
+        public char FleschKincaidReadingEaseGrade
+        {
+            get
+            {
+                if (this.FleschKincaidReadingEase < 20)
+                    return 'F';
+
+                if (this.FleschKincaidReadingEase < 30)
+                    return 'E';
+
+                if (this.FleschKincaidReadingEase < 40)
+                    return 'D';
+
+                if (this.FleschKincaidReadingEase < 60)
+                    return 'C';
+
+                if (this.FleschKincaidReadingEase >= 60 && this.FleschKincaidReadingEase <= 90)
+                    return 'A';
+
+                if (this.FleschKincaidReadingEase > 90)
+                    return 'B';
+
+                return ' ';
+            }
+        }
+
         public double FleschKincaidGradeLevel { get; set; }
         public double GunningFogScore { get; set; }
         public double ColemanLiauIndex { get; set; }
@@ -22,24 +49,30 @@ namespace ContentGrader.Core.Models
         public int ReadingTime { get; set; }
         public int SpeakingTime { get; set; }
 
-        public FleschKincaidLevel GetFleschKincaidLevel()
+        public FleschKincaidLevel FleschKincaidLevel
         {
-            if (_fleschKincaidLevel == null)
+            get
             {
-                _fleschKincaidLevel = TextStatisticAnalyser.GetLevelForFleschKincaidScore(this);
-            }
+                if (_fleschKincaidLevel == null)
+                {
+                    _fleschKincaidLevel = TextStatisticAnalyser.GetLevelForFleschKincaidScore(this);
+                }
 
-            return _fleschKincaidLevel;
+                return _fleschKincaidLevel;
+            }
         }
 
-        public AutomatedReadabilityLevel GetAutomatedReadabiltyLevel()
+        public AutomatedReadabilityLevel AutomatedReadabiltyLevel
         {
-            if (_automatedReadabilityLevel == null)
+            get
             {
-                _automatedReadabilityLevel = TextStatisticAnalyser.GetAutomatedReadabilityLevel(this);
-            }
+                if (_automatedReadabilityLevel == null)
+                {
+                    _automatedReadabilityLevel = TextStatisticAnalyser.GetAutomatedReadabilityLevel(this);
+                }
 
-            return _automatedReadabilityLevel;
+                return _automatedReadabilityLevel;
+            }
         }
     }
 }

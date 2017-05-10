@@ -1,1 +1,44 @@
-﻿
+﻿.content-grade .info-box {
+    border-right:inset 1px #ccc;
+    padding:0 25px;
+    height: 205px;
+}
+    .content-grade .info-box:last-child {
+        border-right:none;
+    }
+.grade {
+    font-size: 5em;
+    font-weight: bold;
+    display: block;
+    margin: 50px;
+}
+.grade.scale-F {
+    color: #b50606;
+}
+
+.grade.scale-E {
+    color: #c7750d;
+}
+
+.grade.scale-D {
+    color: #d0c90c;
+}
+
+.grade.scale-C {
+    color: #b9cc29;
+}
+
+.grade.scale-B {
+    color: #75a53e;
+}
+
+.grade.scale-A {
+    color: #186932;
+}
+
+.explination-text {
+    position: absolute;
+    background: rgba(243, 243, 245, 0.95);
+    height: 205px;
+    padding:0px 20px;
+}
