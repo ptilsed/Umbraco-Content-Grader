@@ -1,0 +1,85 @@
+﻿<div ng-controller="Umbraco.PropertyEditors.RTEController" class="umb-editor umb-rte">
+    <div ng-if="isLoading">Loading...</div>
+    <textarea ng-style="{ visibility :  isLoading ? 'hidden' : 'visible'}"
+              ng-model="model.value" rows="10"
+              id="{{textAreaHtmlId}}"></textarea>
+
+    <umb-overlay ng-if="linkPickerOverlay.show"
+                 model="linkPickerOverlay"
+                 view="linkPickerOverlay.view"
+                 position="right">
+    </umb-overlay>
+
+    <umb-overlay ng-if="mediaPickerOverlay.show"
+                 model="mediaPickerOverlay"
+                 position="right"
+                 view="mediaPickerOverlay.view">
+    </umb-overlay>
+
+    <umb-overlay ng-if="embedOverlay.show"
+                 model="embedOverlay"
+                 position="right"
+                 view="embedOverlay.view">
+    </umb-overlay>
+
+    <umb-overlay ng-if="macroPickerOverlay.show"
+                 model="macroPickerOverlay"
+                 view="macroPickerOverlay.view"
+                 position="right">
+    </umb-overlay>
+    <div ng-controller="ContentGrader.Controller" ng-show="showContentGrade">
+        <div class="row well well-small muted content-grade" ng-class="{'blur': showRatingHelp || showStatisticsHelp || showGradeLevelsHelp}">
+            <div class="span3 info-box">
+                <h5>Readability Rating <a ng-click="showRatingHelp = ! showRatingHelp" class="help-icon"><i class="icon-section icon-help-alt"></i></a></h5>
+                <span class="grade scale-{{score.FleschKincaidReadingEaseGrade}}">{{score.FleschKincaidReadingEaseGrade}}</span>
+            </div>
+            <div class="span4 info-box">
+                <h5>Statistics <a ng-click="showStatisticsHelp = ! showStatisticsHelp" class="help-icon"><i class="icon-section icon-help-alt"></i></a></h5>
+                <p>Reading Time: {{score.ReadingTime | secondsToMinute}}</p>
+                <p>Speaking Time: {{score.SpeakingTime | secondsToMinute}}</p>
+                <p>Sentence Count: {{score.SentenceCount}}</p>
+                <p>Word Count: {{score.WordCount}}</p>
+            </div>
+            <div class="span5 info-box">
+                <h5>Readability Grade Levels <a ng-click="showGradeLevelsHelp = ! showGradeLevelsHelp" class="help-icon"><i class="icon-section icon-help-alt"></i></a></h5>
+                <p>Flesch-Kincaid Grade Level: {{score.FleschKincaidGradeLevel}}</p>
+                <p>Gunning Fog Index: {{score.GunningFogScore}}</p>
+                <p>Coleman-Liau Index: {{score.ColemanLiauIndex}}</p>
+                <p>SMOG Index: {{score.SMOGIndex}}</p>
+                <p>Automated Readability Index: {{score.AutomatedReadabilityIndex}}</p>
+            </div>
+        </div>
+        <div class="row well well-small muted content-grade-help" ng-show="showRatingHelp || showStatisticsHelp || showGradeLevelsHelp">
+            <div ng-show="showRatingHelp" class="span11 explination-text">
+                <a ng-click="showRatingHelp = ! showRatingHelp" class="help-close">
+                    <i class="icon-section icon-delete"></i> Close
+                </a>
+                <h3>Ratings Help</h3>
+                <p>Ratings are from A to E, where A-rated text is very easy to read for the general public, and E-rated text is very hard to read. This grade is based on the <a href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests" target="_blank">Flesch Kincaid Reading Ease score</a></p>
+                <ul>
+                    <li>A - Easy to read. Conversational English for consumers.</li>
+                    <li>B - Very easy to read. Easily understood by an average 11-year-old student.</li>
+                    <li>C - Plain English. Easily understood by 13- to 15-year-old students.</li>
+                    <li>D - Fairly difficult to read.</li>
+                    <li>E - Difficult to read.</li>
+                    <li>F - Very difficult to read. Best understood by university graduates..</li>
+                </ul>
+            </div>
+            <div ng-show="showStatisticsHelp" class="span11 explination-text">
+                <a ng-click="showStatisticsHelp = ! showStatisticsHelp" class="help-close">
+                    <i class="icon-section icon-delete"></i> Close
+                </a>
+                <h3>Statistics Help</h3>
+                <p>These figures highlight some key metrics about the content. It will give a rough estimation of how long it would take the average person to read the content and also how long it would take them to read it aloud</p>
+                <p>The word and sentence count are used as the basis for the grade ratings shown for the content.</p>
+            </div>
+            <div ng-show="showGradeLevelsHelp" class="span11 explination-text">
+                <a ng-click="showGradeLevelsHelp = ! showGradeLevelsHelp" class="help-close">
+                    <i class="icon-section icon-delete"></i> Close
+                </a>
+                <h3>Readability Grade Levels Help</h3>
+                <p>A grade level, based on the USA school system, it is equivalent to the number of years of education a person has had in order to understand the content. A score of around 10-12 is roughly the reading level on completion of high school.</p>
+            </div>
+        </div>
+    </div>
+</div>
