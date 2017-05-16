@@ -10,9 +10,10 @@
       "prevalues": {
         "fields": [
           {
-            "hideLable": "True",
-            "key": "editor",
-            "view": "views/propertyeditors/rte/rte.prevalues.html"
+            "label": "Live Updates",
+            "description": "Should the content score be updated as you type?",
+            "key": "liveUpdates",
+            "view": "~/umbraco/views/propertyeditors/rte/rte.prevalues.html"
           }
         ]
       }

@@ -84,3 +84,11 @@
     .help-icon:hover {
         text-decoration: none;
     }
+
+@media (max-width: 500px) {
+    .content-grade .info-box {
+        border-right: 0;
+        height: auto;
+        width:100%;
+    }
+}

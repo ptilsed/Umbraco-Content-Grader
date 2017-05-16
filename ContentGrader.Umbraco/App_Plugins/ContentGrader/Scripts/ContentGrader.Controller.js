@@ -11,6 +11,10 @@
                     $scope.showContentGrade = true;
                 });
             }
+            else
+            {
+                $scope.showContentGrade = false;
+            }
         }
     );
 });
