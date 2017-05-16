@@ -434,6 +434,11 @@
   </Target>
   <Import Project="..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.3.1\tools\AutoMapper.targets')" />
   <Import Project="..\packages\UmbracoCms.7.6.1\build\UmbracoCms.targets" Condition="Exists('..\packages\UmbracoCms.7.6.1\build\UmbracoCms.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)Bin\ContentGrader.Core.dll" "$(SolutionDir)ContentGrader.Web\Bin"  /E /Y /s
+xcopy "$(ProjectDir)App_Plugins\ContentGrader" "$(SolutionDir)ContentGrader.Web\App_Plugins\ContentGrader"  /E /Y /s 
+</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

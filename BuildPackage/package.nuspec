@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Umbraco.Content.Grader</id>
+        <version>0.0.0</version>
+        <title>Content Grader for Umbraco 7.4 or higher</title>
+        <authors>Paul Tilsed</authors>
+        <owners>Paul Tilsed</owners>
+        <projectUrl>https://github.com/ptilsed/Umbraco-Content-Grader</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>
+			A data type that is built on top of the standard RTE in Umbraco. Adds a live content grade as the editor inputs content from A-F based on the Flesch-Kincaid readability scores.
+        </description>
+        <summary>
+			Provides a content grader for the RTE in umbraco
+		</summary>
+        <copyright>Paul Tilsed</copyright>
+        <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+        <language>en-GB</language>
+        <tags>umbraco umbraco7 developer backoffice</tags>
+        <dependencies>
+          <dependency id="UmbracoCms.Core" version="7.4.0" />
+        </dependencies>
+    </metadata>    
+</package>

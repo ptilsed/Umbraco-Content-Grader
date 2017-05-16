@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <info>
+    <package>
+      <name>Umbraco Content Grader</name>
+      <version>0.0.0</version>
+      <license url="http://opensource.org/licenses/MIT">MIT License</license>
+      <url>https://our.umbraco.org/projects/</url>
+      <requirements>
+        <major>7</major>
+        <minor>4</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Paul Tilsed</name>
+      <website>https://github.com/ptilsed</website>
+    </author>
+    <readme>
+      <![CDATA[
+         A data type that is built on top of the standard RTE in Umbraco. Adds a live content grade as the editor inputs content from A-F based on the Flesch-Kincaid readability scores.
+        ]]>
+    </readme>
+  </info>
+
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+
+  <Actions/>
+
+  <control />
+
+  <files />
+
+</umbPackage>

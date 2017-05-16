@@ -7,6 +7,36 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentGrader.Umbraco", "Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentGrader.Core", "ContentGrader.Core\ContentGrader.Core.csproj", "{65CE462F-B3ED-4768-9600-747DA0141D92}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildPackage", "BuildPackage", "{313369CD-A541-48E1-9B6E-7B3ABAD57E80}"
+	ProjectSection(SolutionItems) = preProject
+		BuildPackage\Build.bat = BuildPackage\Build.bat
+		BuildPackage\Package.build.xml = BuildPackage\Package.build.xml
+		BuildPackage\package.nuspec = BuildPackage\package.nuspec
+		BuildPackage\Package.xml = BuildPackage\Package.xml
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ContentGrader.Web", "ContentGrader.Web\", "{19306BB4-D604-4616-80B4-B590B2CB209A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50221"
+		Debug.AspNetCompiler.PhysicalPath = "ContentGrader.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50221\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50221"
+		Release.AspNetCompiler.PhysicalPath = "ContentGrader.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50221\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50221"
+		SlnRelativePath = "ContentGrader.Web\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +51,10 @@ Global
 		{65CE462F-B3ED-4768-9600-747DA0141D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65CE462F-B3ED-4768-9600-747DA0141D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65CE462F-B3ED-4768-9600-747DA0141D92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19306BB4-D604-4616-80B4-B590B2CB209A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19306BB4-D604-4616-80B4-B590B2CB209A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19306BB4-D604-4616-80B4-B590B2CB209A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{19306BB4-D604-4616-80B4-B590B2CB209A}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
