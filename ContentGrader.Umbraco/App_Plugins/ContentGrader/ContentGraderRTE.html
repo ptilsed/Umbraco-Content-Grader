@@ -42,11 +42,11 @@
             </div>
             <div class="span5 info-box">
                 <h5>Readability Grade Levels <a ng-click="showGradeLevelsHelp = ! showGradeLevelsHelp" class="help-icon"><i class="icon-section icon-help-alt"></i></a></h5>
-                <p>Flesch-Kincaid Grade Level: {{score.FleschKincaidGradeLevel}}</p>
-                <p>Gunning Fog Index: {{score.GunningFogScore}}</p>
-                <p>Coleman-Liau Index: {{score.ColemanLiauIndex}}</p>
-                <p>SMOG Index: {{score.SMOGIndex}}</p>
-                <p>Automated Readability Index: {{score.AutomatedReadabilityIndex}}</p>
+                <p><a href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests#Flesch.E2.80.93Kincaid_grade_levelFlesch-Kincaid" target="_blank">Flesch-Kincaid Grade Level</a>: {{score.FleschKincaidGradeLevel}}</p>
+                <p><a href="https://en.wikipedia.org/wiki/Gunning_fog_index" target="_blank">Gunning Fog Index</a>: {{score.GunningFogScore}}</p>
+                <p><a href="https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index" target="_blank">Coleman-Liau Index</a>: {{score.ColemanLiauIndex}}</p>
+                <p><a href="https://en.wikipedia.org/wiki/SMOG" target="_blank">SMOG Index</a>: {{score.SMOGIndex}}</p>
+                <p><a href="https://en.wikipedia.org/wiki/Automated_readability_index" target="_blank">Automated Readability Index</a>: {{score.AutomatedReadabilityIndex}}</p>
             </div>
         </div>
         <div class="row well well-small muted content-grade-help" ng-show="showRatingHelp || showStatisticsHelp || showGradeLevelsHelp">
@@ -55,7 +55,7 @@
                     <i class="icon-section icon-delete"></i> Close
                 </a>
                 <h3>Ratings Help</h3>
-                <p>Ratings are from A to E, where A-rated text is very easy to read for the general public, and E-rated text is very hard to read. This grade is based on the <a href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests" target="_blank">Flesch Kincaid Reading Ease score</a></p>
+                <p>Ratings are from A to E, where A-rated text is easy to read for the general public but not over simplistic, and E-rated text is very hard to read. This grade is based on the <a href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests" target="_blank">Flesch Kincaid Reading Ease score</a></p>
                 <ul>
                     <li>A - Easy to read. Conversational English for consumers.</li>
                     <li>B - Very easy to read. Easily understood by an average 11-year-old student.</li>
@@ -79,6 +79,7 @@
                 </a>
                 <h3>Readability Grade Levels Help</h3>
                 <p>A grade level, based on the USA school system, it is equivalent to the number of years of education a person has had in order to understand the content. A score of around 10-12 is roughly the reading level on completion of high school.</p>
+                <p>Each formula has its own way of calculating the score of the text, which results in the variation amongst the results. For more details on each method click the formula name to be taken to a supporting article</p>
             </div>
         </div>
     </div>
