@@ -5,7 +5,7 @@
     .content-grade .info-box {
         border-right: inset 1px #ccc;
         padding: 0 25px;
-        height: 260px;
+        min-height: 260px;
     }
 
 .blur {
@@ -32,7 +32,7 @@
     font-size: 6em;
     font-weight: bold;
     display: block;
-    margin: 75px 30%;
+    margin: 60px 38%;
 }
 
     .grade.scale-F {
@@ -85,10 +85,25 @@
         text-decoration: none;
     }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
     .content-grade .info-box {
         border-right: 0;
         height: auto;
         width:100%;
     }
+    .content-grade .hide-on-small {
+        display:none;
+    }
 }
+
+@media (min-width: 1101px) and (max-width: 1400px) {
+        .content-grade .info-box {
+        border-right: 0;
+        height: auto;
+        width:100%;
+    }
+    .content-grade .hide-on-small {
+        display:none;
+    }
+}
+

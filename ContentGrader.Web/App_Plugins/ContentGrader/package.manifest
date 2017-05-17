@@ -3,16 +3,15 @@
     {
       "name": "Content Grader",
       "alias": "ContentGrader",
-      "isGridEditor": true, 
+      "isGridEditor": true,
       "editor": {
         "view": "~/App_Plugins/ContentGrader/ContentGraderRTE.html"
       },
       "prevalues": {
         "fields": [
           {
-            "label": "Live Updates",
-            "description": "Should the content score be updated as you type?",
-            "key": "liveUpdates",
+            "label": "",
+            "key": "editor",
             "view": "~/umbraco/views/propertyeditors/rte/rte.prevalues.html"
           }
         ]
@@ -24,7 +23,7 @@
     "~/App_Plugins/ContentGrader/Scripts/ContentGrader.Controller.js",
     "~/App_Plugins/ContentGrader/Scripts/ContentGrader.Resource.js"
   ],
-	css: [
-		"~/App_Plugins/ContentGrader/Css/ContentGrader.css"
-	]
+  css: [
+    "~/App_Plugins/ContentGrader/Css/ContentGrader.css"
+  ]
 }

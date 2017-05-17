@@ -7,6 +7,7 @@
         <authors>Paul Tilsed</authors>
         <owners>Paul Tilsed</owners>
         <projectUrl>https://github.com/ptilsed/Umbraco-Content-Grader</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/ptilsed/Umbraco-Content-Grader/master/BuildPackage/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>
 			A data type that is built on top of the standard RTE in Umbraco. Adds a live content grade as the editor inputs content from A-F based on the Flesch-Kincaid readability scores.

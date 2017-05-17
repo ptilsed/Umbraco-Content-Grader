@@ -136,6 +136,3 @@ FakesAssemblies/
 
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
-ContentGrader.Umbraco/Global.asax
-
-ContentGrader.Umbraco/default.aspx

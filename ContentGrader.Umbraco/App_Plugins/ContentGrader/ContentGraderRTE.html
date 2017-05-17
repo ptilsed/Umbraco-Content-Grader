@@ -32,21 +32,28 @@
             <div class="span3 info-box">
                 <h5>Readability Rating <a ng-click="showRatingHelp = ! showRatingHelp" class="help-icon"><i class="icon-section icon-help-alt"></i></a></h5>
                 <span class="grade scale-{{score.FleschKincaidReadingEaseGrade}}">{{score.FleschKincaidReadingEaseGrade}}</span>
+                <p>
+                    <span ng-show="score.AverageSyllablesPerWord >= 1.9">Try using simpler words with less syllables where possible. </span>
+                    <span ng-show="score.AverageWordsPerSentence > 20">Try using less words in your sentences, short sentences are easier to read.</span>
+                </p>
             </div>
-            <div class="span4 info-box">
+            <div class="span4 info-box hide-on-small">
                 <h5>Statistics <a ng-click="showStatisticsHelp = ! showStatisticsHelp" class="help-icon"><i class="icon-section icon-help-alt"></i></a></h5>
                 <p>Reading Time: {{score.ReadingTime | secondsToMinute}}</p>
                 <p>Speaking Time: {{score.SpeakingTime | secondsToMinute}}</p>
                 <p>Sentence Count: {{score.SentenceCount}}</p>
                 <p>Word Count: {{score.WordCount}}</p>
+                <p>Average Syllables Per Word: {{score.AverageSyllablesPerWord | number:2}}</p>
+                <p>Average Words Per Sentence: {{score.AverageWordsPerSentence| number:1}}</p>
             </div>
-            <div class="span5 info-box">
+            <div class="span5 info-box hide-on-small">
                 <h5>Readability Grade Levels <a ng-click="showGradeLevelsHelp = ! showGradeLevelsHelp" class="help-icon"><i class="icon-section icon-help-alt"></i></a></h5>
                 <p><a href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests#Flesch.E2.80.93Kincaid_grade_levelFlesch-Kincaid" target="_blank">Flesch-Kincaid Grade Level</a>: {{score.FleschKincaidGradeLevel}}</p>
                 <p><a href="https://en.wikipedia.org/wiki/Gunning_fog_index" target="_blank">Gunning Fog Index</a>: {{score.GunningFogScore}}</p>
                 <p><a href="https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index" target="_blank">Coleman-Liau Index</a>: {{score.ColemanLiauIndex}}</p>
                 <p><a href="https://en.wikipedia.org/wiki/SMOG" target="_blank">SMOG Index</a>: {{score.SMOGIndex}}</p>
                 <p><a href="https://en.wikipedia.org/wiki/Automated_readability_index" target="_blank">Automated Readability Index</a>: {{score.AutomatedReadabilityIndex}}</p>
+                <p><a href="https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests" target="_blank">School Level</a>: {{score.FleschKincaidLevel.SchoolLevel}} - {{score.FleschKincaidLevel.Readability}}</p>
             </div>
         </div>
         <div class="row well well-small muted content-grade-help" ng-show="showRatingHelp || showStatisticsHelp || showGradeLevelsHelp">
