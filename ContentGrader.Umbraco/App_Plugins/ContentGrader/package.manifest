@@ -5,7 +5,8 @@
       "alias": "ContentGrader",
       "isGridEditor": true,
       "editor": {
-        "view": "~/App_Plugins/ContentGrader/ContentGraderRTE.html"
+        "view": "~/App_Plugins/ContentGrader/ContentGraderRTE.html",
+        "valueType": "TEXT"
       },
       "prevalues": {
         "fields": [

@@ -1,6 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "Master.cshtml";
+    var model = Model.Content;
 }
 
-@CurrentPage.GetGridHtml("content", "fanoe")
+@Umbraco.Field("contentGrader")
